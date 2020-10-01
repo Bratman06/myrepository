@@ -1,0 +1,32 @@
+import random
+
+words =['abruptly', 'absurd','abyss','affix','askew','avenue','awkward','axiom','azure','bagpipe','bandwagon','banjo','bayou','beekeeper']
+
+letter = []
+word = random.choice(words)
+print(word)
+print("welcome to hangman")
+print( len(word) * '_')
+life = 5
+
+while life > 0 :
+    guess = input(' what is your guess:')
+    if guess in word:
+        print(' you guessed right')
+        letter.append(guess)
+
+        if len(guess) == len(word) and guess in word:
+            print('congrats')
+            break
+
+        else:
+            print ("wrong")
+    elif guess not in word:
+        print( "sorry, you got the wrong letter")
+        letter.append(guess)
+        life -=1
+        print( ' you have', str(life), 'life remaining')
+
+
+
+
