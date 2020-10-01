@@ -19,8 +19,6 @@ while life > 0 :
             print('congrats')
             break
 
-        else:
-            print ("wrong")
     elif guess not in word:
         print( "sorry, you got the wrong letter")
         letter.append(guess)
